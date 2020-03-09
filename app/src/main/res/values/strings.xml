@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Board Games</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_top_games">TopGames</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Board Games</string>
+    <string name="nav_header_subtitle">ralvron@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_logout">Logout</string>
+
+    <string name="menu_top100">Top100</string>
+    <string name="menu_hotness">The Hotness</string>
+    <string name="menu_settings">Settings</string>
+</resources>

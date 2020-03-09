@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_top100">
+
+    <fragment
+        android:id="@+id/nav_top100"
+        android:name="com.example.boardgames.ui.top.Top100Fragment"
+        android:label="@string/menu_top100"
+        tools:layout="@layout/fragment_top100">
+    </fragment>
+    <fragment
+        android:id="@+id/nav_hotness"
+        android:name="com.example.boardgames.ui.hotness.HotnessFragment"
+        android:label="@string/menu_hotness"
+        tools:layout="@layout/fragment_hotness" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.boardgames.ui.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
