@@ -150,7 +150,6 @@ public class RegisterActivity extends AppCompatActivity {
             String password = params[2];
             String payload = "{\"username\": \"" +username+"\", \"email\": \"" +email+"\" ,\"password\": \""+password+"\"}";
 
-
             HttpService httpService = new HttpService();
 
             if (httpService.postMethod(ConstantsHelper.REQUEST_URL_REGISTER, payload)) {

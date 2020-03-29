@@ -1,3 +1,10 @@
+// <items termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+//      <item id="174430" rank="1">
+//          <thumbnail value="image.jpg"/>
+//          <name value="Name"/>
+//          <yearpublished value="2017"/>
+//      </item>
+// <items>
 package com.example.boardgames.Handlers;
 
 import com.example.boardgames.Model.Hotness;
@@ -50,6 +57,7 @@ public class HotnessHandler extends DefaultHandler {
         if (localName.equals("item")) {
             currentGame = new Hotness();
             currentGame.setRank(attributes.getValue("rank"));
+            currentGame.setId(attributes.getValue("id"));
         } else if (localName.equals("thumbnail")) {
             currentGame.setImage(attributes.getValue("value"));
         } else if (localName.equals("name")) {

@@ -1,5 +1,8 @@
 package com.example.boardgames.ui.settings;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +16,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.boardgames.Classes.ConstantsHelper;
 import com.example.boardgames.Classes.IntentService;
+import com.example.boardgames.Classes.LocationService;
 import com.example.boardgames.Classes.SharedPrefService;
 import com.example.boardgames.LoginActivity;
 import com.example.boardgames.Model.User;
@@ -25,7 +29,7 @@ public class SettingsFragment extends Fragment {
 
     List<User> users;
     View settingView;
-    TextView firstNameText, lastNameText, countryText, stateText, yearText, lastLoginText;
+    TextView firstNameText, lastNameText, countryText, stateText, yearText, lastLoginText, locationText;
     Button logoutButton;
     SharedPrefService sharedPrefService;
 
@@ -40,6 +44,7 @@ public class SettingsFragment extends Fragment {
         stateText = settingView.findViewById(R.id.state_user);
         yearText = settingView.findViewById(R.id.year_user);
         lastLoginText = settingView.findViewById(R.id.lastlogin_user);
+        locationText = settingView.findViewById(R.id.location_user);
 
         logoutButton = settingView.findViewById(R.id.logout);
 
@@ -55,6 +60,8 @@ public class SettingsFragment extends Fragment {
                 SettingsFragment.this.doLogout();
             }
         });
+
+        this.setLocationOnView();
 
         return settingView;
     }
@@ -90,6 +97,14 @@ public class SettingsFragment extends Fragment {
 
     private String getUsernameSharedPrefs() {
         return sharedPrefService.getSharedPrefString("username");
+    }
+
+    private void setLocationOnView() {
+        LocationService locationService = new LocationService(getActivity());
+        double latitude = locationService.getLatitudeLocation();
+        double longitude = locationService.getLongitudeLocation();
+
+        locationText.setText(Double.toString(latitude) + ' ' + Double.toString(longitude));
     }
 
     private void clearSharedPrefs () {

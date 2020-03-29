@@ -69,8 +69,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(validator.isRangeInvalid(s.toString(), 4, 20)) {
                     HashMap<String,String> params = new HashMap<String,String>();
-                    params.put("max", "4");
-                    params.put("min", "20");
+                    params.put("min", "4");
+                    params.put("max", "20");
                     validator.showError(usernameError,"range", "username", params);
                 }
             }
@@ -96,8 +96,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(validator.isRangeInvalid(s.toString(), 4, 20)) {
                     HashMap<String,String> params = new HashMap<String,String>();
-                    params.put("max", "4");
-                    params.put("min", "20");
+                    params.put("min", "4");
+                    params.put("max", "20");
                     validator.showError(passwordError,"range", "password", params);
                 }
             }
@@ -182,6 +182,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     // Remove title bar at the top of the activity
     private void hideTitleBar() {
+
         getSupportActionBar().hide();
     }
 

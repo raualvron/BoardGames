@@ -1,3 +1,20 @@
+// <user id="2458822" name="upo2020" termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+//        <firstname value="Upo"/>
+//        <lastname value="2020"/>
+//        <avatarlink value="N/A"/>
+//        <yearregistered value="2020"/>
+//        <lastlogin value="2020-03-20"/>
+//        <stateorprovince value="Andalusia"/>
+//        <country value="Spain"/>
+//        <webaddress value=""/>
+//        <xboxaccount value=""/>
+//        <wiiaccount value=""/>
+//        <psnaccount value=""/>
+//        <battlenetaccount value=""/>
+//        <steamaccount value=""/>
+//        <traderating value="0"/>
+//        <marketrating value="0"/>
+// </user>
 package com.example.boardgames.Handlers;
 
 import com.example.boardgames.Model.User;

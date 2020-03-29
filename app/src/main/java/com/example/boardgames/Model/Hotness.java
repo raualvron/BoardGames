@@ -1,8 +1,11 @@
 package com.example.boardgames.Model;
 
 public class Hotness {
-    private String nameGame, image, rank, year;
-    private Integer id;
+    private String nameGame;
+    private String image;
+    private String rank;
+    private String year;
+    private String id;
 
     public void setNameGame(String nameGame) {
         this.nameGame = nameGame;
@@ -20,7 +23,7 @@ public class Hotness {
         this.year = year;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -40,7 +43,7 @@ public class Hotness {
         return year;
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 }
